@@ -1,0 +1,39 @@
+{
+  "name": "aksara",
+  "version": "1.0.0",
+  "description": "An Opinionated Boilerplate for Node.js",
+  "scripts": {
+    "prod": "cross-env NODE_ENV=prod node ./bin/www",
+    "dev": "cross-env NODE_ENV=dev nodemon ./bin/www -L",
+    "socket": "node ./core/socket.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "bull": "^3.22.4",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.6.0",
+    "socket.io-client": "^4.0.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "express": "^4.17.1",
+    "ejs": "^3.1.6",
+    "socket.io": "^4.0.1",
+    "sequelize": "^6.6.2",
+    "redis": "^3.1.2",
+    "dotenv": "^8.2.0",
+    "cross-env": "^7.0.3",
+    "sequelize-cli": "^6.2.0"
+  }
+}
