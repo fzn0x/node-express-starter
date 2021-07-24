@@ -17,19 +17,13 @@ const api = require("./routes/api");
 const tokenMiddleware = require("./middlewares/token.middleware");
 
 const app = express();
+
 // SECURITY CONFIG
-app.use(session({ secret: "EarlyAssessmentviIWDJijcioxwsoOWdl" }));
+app.use(session({ secret: CONFIG.appKey }));
 // form csrf
 app.use(cors());
-
-app.disable("x-powered-by");
-app.use((req, res, next) => {
-  app.disable("x-powered-by");
-  res.setHeader("X-Powered-By", "Early-V1");
-  next();
-});
-
 // END SECURITY CONFIG
+
 // Fileupload using express
 app.use(fileUpload());
 // Enabling application/json request body
