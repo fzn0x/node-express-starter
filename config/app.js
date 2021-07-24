@@ -30,7 +30,7 @@ CONFIG.socketPort = process.env.SOCKET_PORT;
 
 //JWT CONFIG
 CONFIG.jwtSecretKey = process.env.JWT_SECRET_KEY;
-CONFIG.tokenHeaderKey = process.env.TOKEN_HEADER_KEY;
+CONFIG.tokenHeaderKey = process.env.TOKEN_HEADER_KEY || "Authorization";
 
 //FILE STORAGE
 CONFIG.baseFileStorage = process.env.BASE_FILE_STORAGE;
