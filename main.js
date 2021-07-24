@@ -6,13 +6,13 @@ const createError = require("http-errors");
 const compression = require("compression");
 const express = require("express");
 const session = require("express-session");
-const bodyParser = require("body-parser");
 const path = require("path");
 const cors = require("cors");
 
-const api = require("./routes/api");
 // for monolithic app
-// const web = require("./routes/web");
+const web = require("./routes/web");
+// for microservices app
+const api = require("./routes/api");
 
 const tokenMiddleware = require("./middlewares/token.middleware");
 
@@ -93,9 +93,10 @@ app.use(compression());
 app.use(express.json());
 app.use(cors());
 
-app.use("/api", api);
 // for monolithic app
-// app.use("/", web);
+app.use("/", web);
+// for microservices app
+app.use("/api", api);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

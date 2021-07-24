@@ -4,7 +4,7 @@ const dashboardController = require("../controllers/dashboard.controller");
 const sessionMiddleware = require("../middlewares/session.middleware");
 
 // Without Auth Middleware
-webRouter.post("/", dashboardController.index);
+webRouter.get("/", dashboardController.index);
 
 // With Auth Middleware
 

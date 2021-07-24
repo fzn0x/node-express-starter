@@ -1,5 +1,7 @@
+const { name, description } = require("../package.json");
+
 module.exports.index = (req, res) => {
-  res.render("index", {
-    title: "Homepage",
+  return res.render("index", {
+    title: `${name} - ${description}`,
   });
 };
