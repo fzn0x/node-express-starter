@@ -2,26 +2,28 @@ const { User, sequelize } = require("../core/db.sequelizer");
 const bcrypt = require("bcrypt");
 const { QueryTypes } = require("sequelize");
 
-const publicAttributes = [
-  "id",
-  "email",
-  "password",
-  "type",
-];
+const publicAttributes = ["id", "email", "password", "type"];
 
 module.exports.createUser = async (userInfo) => {
-  let user = await User.create(userInfo);
+  const user = await User.create(userInfo);
   let filterResponse = user;
   delete filterResponse["dataValues"].password;
   return filterResponse;
 };
 
+module.exports.updateUser = async (user, options) => {
+  Object.assign(user, options);
+  let updated = await user.save();
+
+  return updated;
+};
+
 module.exports.findByEmail = async (emailData) => {
-  let condition = {
+  const condition = {
     email: emailData,
   };
 
-  let user = await User.findOne({
+  const user = await User.findOne({
     attributes: publicAttributes,
     where: condition,
   });

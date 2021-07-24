@@ -11,17 +11,17 @@ apiRouter.post("/auth/forgot-password", userController.forgotPassword);
 
 // With Auth Middleware
 // User
-// apiRouter.post(
-//   "/auth/change-password",
-//   tokenMiddleware.verify,
-//   sessionMiddleware.validate,
-//   userController.changePassword
-// );
-// apiRouter.post(
-//   "/auth/logout",
-//   tokenMiddleware.verify,
-//   sessionMiddleware.validate,
-//   userController.logout
-// );
+apiRouter.post(
+  "/auth/change-password",
+  tokenMiddleware.verify,
+  sessionMiddleware.validate,
+  userController.changePassword
+);
+apiRouter.post(
+  "/auth/logout",
+  tokenMiddleware.verify,
+  sessionMiddleware.validate,
+  userController.logout
+);
 
 module.exports = apiRouter;
