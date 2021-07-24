@@ -1,9 +1,13 @@
 this is default directory for handling queue.
 
-## Usage
+## Queue Usage Example
 
 ```js
 // IIFE
+const data = {
+  email : "fncolon@pm.me"
+}
+
 (async () => {
   try {
     await mailQueue("sendMailEvent", data);
@@ -13,7 +17,11 @@ this is default directory for handling queue.
 })();
 
 // MODULES
-module.exports.sendMail = () => {
+const data = {
+  email : "fncolon@pm.me"
+}
+
+module.exports.sendMail = async () => {
   try {
     await mailQueue("sendMailEvent", data);
   } catch (e) {

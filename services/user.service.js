@@ -1,19 +1,15 @@
 const { User, sequelize } = require("../core/db.sequelizer");
 const bcrypt = require("bcrypt");
 const { QueryTypes } = require("sequelize");
+
 const publicAttributes = [
   "id",
   "email",
   "password",
-  "name",
-  "phone_number",
-  "address",
-  "phone_number",
   "type",
 ];
 
 module.exports.createUser = async (userInfo) => {
-  userInfo.credit = 10;
   let user = await User.create(userInfo);
   let filterResponse = user;
   delete filterResponse["dataValues"].password;

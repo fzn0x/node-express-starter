@@ -18,22 +18,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      address: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      phone_number: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
       type: {
-        type: DataTypes.ENUM("customer", "admin"),
+        type: DataTypes.ENUM("user", "admin"),
         allowNull: true,
-        defaultValue: "customer",
+        defaultValue: "user",
       },
     },
     {

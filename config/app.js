@@ -4,6 +4,7 @@ const path = require("path");
 CONFIG = {};
 
 // APPLICATION CONTEXT CONFIG
+CONFIG.appKey = process.env.APP_KEY;
 CONFIG.mode = process.env.MODE;
 CONFIG.appPort = process.env.PORT;
 

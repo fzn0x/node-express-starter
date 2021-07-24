@@ -10,19 +10,19 @@ const {
 const { verifyObjectProperties } = require("../utils/obj.util");
 
 module.exports.login = async (req, res) => {
-  if (!req.body) {
+  const validation = [
+      "email",
+      "password"
+  ];
+  if (
+    !verifyObjectProperties(req.body, validation)
+  ) {
     return res.status(422).json({
       success: false,
-      message: "Email and password is required.",
+      message: `${validation.join()} is required.`,
     });
   }
 
-  if (!req.body.email && !req.body.password) {
-    return res.status(400).json({
-      success: false,
-      message: "Email and password cannot empty.",
-    });
-  }
   // Find active user with supplied email
   let user = await findByEmail(req.body.email);
 
@@ -57,34 +57,26 @@ module.exports.login = async (req, res) => {
 
   return res.json({
     success: true,
-    message: "Login Successful!",
+    message: "Logged in successfully.",
     token: token,
     data: req.session.user,
   });
 };
 
 module.exports.register = async (req, res) => {
-  if (!req.body) {
-    return res.status(422).json({
-      success: false,
-      message: "Email,fullname,password,address,phone number is required.",
-    });
-  }
-
-  if (
-    !verifyObjectProperties(req.body, [
+  const validation = [
       "email",
-      "name",
       "password",
-      "address",
-      "phone_number",
-    ])
+  ];
+  if (
+    !verifyObjectProperties(req.body, validation)
   ) {
     return res.status(422).json({
       success: false,
-      message: "Email,fullname,password,address,phone number is required.",
+      message: `${validation.join()} is required.`,
     });
   }
+
   let user = await findByEmail(req.body.email);
   //if user exist return false,saying cannot be used anymore
   if (user)
@@ -97,8 +89,6 @@ module.exports.register = async (req, res) => {
     email: req.body.email,
     password: await bcrypt.hash(req.body.password, 10),
     name: req.body.name,
-    address: req.body.address,
-    phone_number: req.body.phone_number,
   };
 
   let created = await createUser(userInfo);
@@ -110,10 +100,28 @@ module.exports.register = async (req, res) => {
 
   return res.json({
     success: true,
-    message: "User register successfully.",
+    message: "User registered successfully.",
     data: created,
   });
 };
+
+module.exports.forgotPassword = async (req, res) => {
+  const validation = ["email"];
+  if (
+    !verifyObjectProperties(req.body, validation)
+  ) {
+    return res.status(422).json({
+      success: false,
+      message: `${validation.join()} is required.`,
+    });
+  }
+
+  return res.json({
+    success: true,
+    message: "Forgot password email already sent to your email.",
+  });
+};
+
 
 module.exports.loginTest = async (req, res) => {
   return res.json({
