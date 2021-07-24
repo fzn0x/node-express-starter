@@ -14,11 +14,11 @@ Aksara is an Opinionated Boilerplate for Node.js which this boilerplate has its 
 
 ## Features
 
-🚀 Auto-migration on development mode using Sequelizer
-🚀 Ready to use authentication API (Models,Seeder,Middleware,Controller,Route)
-🚀 Upload and Get File API example with express-fileupload
-🚀 Email queue example with Redis and Socket.IO
-🚀 EJS integration for Monolithic App
+🚀 Auto-migration on development mode using Sequelizer\
+🚀 Ready to use authentication API (Models,Seeder,Middleware,Controller,Route)\
+🚀 Upload and Get File API example with express-fileupload\
+🚀 Email queue example with Redis and Socket.IO\
+🚀 EJS integration for Monolithic App\
 🚀 Unit test example with Mocha and Chai
 
 ## Todo (Assigned to Author)
