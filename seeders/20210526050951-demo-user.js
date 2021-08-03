@@ -12,7 +12,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        email: "fncolon@pm.me",
+        email: "developerfauzan@gmail.com",
         password: await bcrypt.hash("aksara123", 10),
         type: "user",
         created_at: new Date(),

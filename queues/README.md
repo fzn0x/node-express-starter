@@ -5,10 +5,8 @@ this is default directory for handling queue.
 ```js
 // IIFE
 const data = {
-  email : "fncolon@pm.me"
-}
-
-(async () => {
+  email: "developerfauzan@gmail.com",
+}(async () => {
   try {
     await mailQueue("sendMailEvent", data);
   } catch (e) {
@@ -18,8 +16,8 @@ const data = {
 
 // MODULES
 const data = {
-  email : "fncolon@pm.me"
-}
+  email: "developerfauzan@gmail.com",
+};
 
 module.exports.sendMail = async () => {
   try {

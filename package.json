@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "An Opinionated Boilerplate for Node.js",
   "scripts": {
-    "prod": "cross-env NODE_ENV=prod node ./bin/www",
+    "prod": "cross-env NODE_ENV=prod node --trace-warnings ./bin/www",
     "dev": "cross-env NODE_ENV=dev nodemon ./bin/www -L",
     "socket": "node ./core/socket.js"
   },

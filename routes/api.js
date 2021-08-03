@@ -7,7 +7,9 @@ const sessionMiddleware = require("../middlewares/session.middleware");
 // Without Auth Middleware
 apiRouter.post("/auth/login", userController.login);
 apiRouter.post("/auth/register", userController.register);
+
 apiRouter.post("/auth/forgot-password", userController.forgotPassword);
+apiRouter.post("/auth/reset-password/:token", userController.resetPassword);
 
 // With Auth Middleware
 // User

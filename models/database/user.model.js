@@ -32,5 +32,13 @@ module.exports = (sequelize, DataTypes) => {
       },
     }
   );
+
+  User.associate = (models) => {
+    User.hasOne(models.PasswordReset, {
+      foreignKey: "id",
+      as: "PasswordReset",
+    });
+  };
+
   return User;
 };

@@ -19,7 +19,13 @@ const tokenMiddleware = require("./middlewares/token.middleware");
 const app = express();
 
 // SECURITY CONFIG
-app.use(session({ secret: CONFIG.appKey }));
+app.use(
+  session({
+    secret: CONFIG.appKey,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 // form csrf
 app.use(cors());
 // END SECURITY CONFIG

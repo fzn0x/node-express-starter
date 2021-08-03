@@ -7,6 +7,8 @@ CONFIG = {};
 CONFIG.appKey = process.env.APP_KEY;
 CONFIG.mode = process.env.MODE;
 CONFIG.appPort = process.env.PORT;
+CONFIG.appUrl = process.env.APP_URL || "http://localhost:3000/";
+CONFIG.frontendUrl = process.env.FRONTEND_URL || CONFIG.appUrl;
 
 //DATABASE CONFIG
 CONFIG.dbHost = process.env.DB_HOST;
