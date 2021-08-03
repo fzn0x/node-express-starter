@@ -24,7 +24,7 @@ Aksara is an Opinionated Boilerplate for Node.js which this boilerplate has its 
 ## Todo (Assigned to Author)
 
 - [x] Auto Migration
-- [ ] Ready to use authentication API
+- [x] Ready to use authentication API
 - [ ] Upload and Get File API
 - [x] Email Queue
 - [x] EJS integration
