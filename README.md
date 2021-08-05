@@ -30,5 +30,4 @@ Aksara is an Opinionated Boilerplate for Node.js which this boilerplate has its 
 - [x] Email Queue
 - [x] EJS integration
 - [x] Unit Test
-- [ ] Dynamic Routes
 - [ ] API Documentation for API Examples
