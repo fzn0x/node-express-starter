@@ -1,0 +1,184 @@
+{
+  "info": {
+    "_postman_id": "991458e2-1527-4b61-ad4f-6a0285b8ad3b",
+    "name": "Aksara",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Login",
+          "id": "6c38bf6a-9723-44a4-86f9-48520e2d310e",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "email",
+                  "value": "developerfauzan@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "aksara123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{node_host}}/api/auth/login"
+          },
+          "response": []
+        },
+        {
+          "name": "Register",
+          "id": "1dd098f4-eb2e-4eab-b119-988fb11cc134",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "aksara@pm.me",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "aksara",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{node_host}}/api/auth/register"
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot Password",
+          "id": "aff6347a-0d78-4b1a-97b8-e8668b9a99c7",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "developerfauzan@gmail.com",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{node_host}}/api/auth/forgot-password"
+          },
+          "response": []
+        },
+        {
+          "name": "Change Password",
+          "id": "2147eb96-faca-4cf1-84b0-493b7b7de6df",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiU2F0IEp1bCAyNCAyMDIxIDIwOjMyOjIyIEdNVCswNzAwIChJbmRvY2hpbmEgVGltZSkiLCJ1c2VySWQiOjIsImVtYWlsIjoiZm5jb2xvbkBwbS5tZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjI3MTMzNTQyLCJleHAiOjE2MjcxNjk1NDJ9.-ugpn0zsJhUlqa_dqAPf68G8SJDDIIRFtSMtqy9nTHo",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "old_password",
+                  "value": "fncolon",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "aksara123",
+                  "type": "text"
+                },
+                {
+                  "key": "repeat_password",
+                  "value": "aksara123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{node_host}}/api/auth/change-password"
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "id": "32444a98-5a0d-43e0-997d-4d36d93721ce",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiU2F0IEp1bCAyNCAyMDIxIDE4OjUyOjQzIEdNVCswNzAwIChJbmRvY2hpbmEgVGltZSkiLCJ1c2VySWQiOjIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjI3MTI3NTYzLCJleHAiOjE2MjcxNjM1NjN9.6yCe7uhI9ZfuvVZNCQ1PsOp3yeAmYLhVNgni4eFCZgw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": "{{node_host}}/api/auth/logout"
+          },
+          "response": []
+        }
+      ],
+      "id": "f6700d92-052a-436e-9221-c10861a46b92"
+    },
+    {
+      "name": "File Management",
+      "item": [
+        {
+          "name": "Get File",
+          "id": "c71fe6f5-96a5-4457-9e40-23ee84232a41",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": "{{node_host}}/api/file/16da5938-fc36-4d0c-8b1e-a4c8556309e5"
+          },
+          "response": []
+        },
+        {
+          "name": "Upload File",
+          "id": "50a2c7ce-e3ec-409d-afaa-7e0ab093d562",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/user/Downloads/download (19).jpg.txt"
+                }
+              ]
+            },
+            "url": "{{node_host}}/api/file"
+          },
+          "response": []
+        }
+      ],
+      "id": "bf1b69a0-1a8b-4c32-95f5-30f784272def"
+    }
+  ]
+}

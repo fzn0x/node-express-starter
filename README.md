@@ -19,7 +19,7 @@ Aksara is an Opinionated Boilerplate for Node.js which this boilerplate has its 
 🚀 Upload and Get File API example with express-fileupload\
 🚀 Email queue example with Redis and Socket.IO\
 🚀 EJS integration for Monolithic App\
-🚀 Unit test example with Mocha and Chai
+🚀 Unit test example with Mocha and Chai\
 🚀 API Documentation example with Postman and Swagger
 
 ## Todo (Assigned to Author)
