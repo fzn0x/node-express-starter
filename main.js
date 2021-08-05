@@ -54,7 +54,10 @@ db.sequelize
   });
 
 /*APP BOOTSTRAPPING*/
-if (CONFIG.mode === "dev" || CONFIG.mode === "development") {
+if (
+  CONFIG.mode.toString().toLowerCase() === "dev" ||
+  CONFIG.mode.toString().toLowerCase() === "development"
+) {
   console.log("App runs on local development");
   // Logging
   app.use(morganLogger("common"));
@@ -64,8 +67,18 @@ if (CONFIG.mode === "dev" || CONFIG.mode === "development") {
   db.sequelize.sync();
 }
 
+if (
+  CONFIG.mode.toString().toLowerCase() === "test" ||
+  CONFIG.mode.toString().toLowerCase() === "testing"
+) {
+  console.log("App runs on test");
+}
+
 // Production Options
-if (CONFIG.mode === "prod" || CONFIG.mode === "production") {
+if (
+  CONFIG.mode.toString().toLowerCase() === "prod" ||
+  CONFIG.mode.toString().toLowerCase() === "production"
+) {
   console.log("App runs on local production");
   // Add gzip compression
   const compression = require("compression");
