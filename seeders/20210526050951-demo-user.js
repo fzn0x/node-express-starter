@@ -2,6 +2,7 @@
 const bcrypt = require("bcrypt");
 
 module.exports = {
+  // eslint-disable-next-line
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert("users", [
       {
@@ -20,7 +21,7 @@ module.exports = {
       },
     ]);
   },
-
+  // eslint-disable-next-line
   down: async (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete("users", null, {});
   },

@@ -1,0 +1,11 @@
+body {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.aksara-text {
+  background: linear-gradient(to right, #ff8a00 0%, #dd4c4f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 10rem;
+}

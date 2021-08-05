@@ -1,7 +1,7 @@
 require("dotenv").config();
 const path = require("path");
 
-CONFIG = {};
+let CONFIG = {};
 
 // APPLICATION CONTEXT CONFIG
 CONFIG.appKey = process.env.APP_KEY;

@@ -1,5 +1,7 @@
+// eslint-disable-next-line
 const { User, PasswordReset, sequelize } = require("../core/db.sequelizer");
 const bcrypt = require("bcrypt");
+// eslint-disable-next-line
 const { QueryTypes } = require("sequelize");
 
 const userAttributes = ["id", "email", "password", "type"];

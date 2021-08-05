@@ -5,7 +5,14 @@
   "scripts": {
     "prod": "cross-env NODE_ENV=prod node --trace-warnings ./bin/www",
     "dev": "cross-env NODE_ENV=dev nodemon ./bin/www -L",
-    "socket": "node ./core/socket.js"
+    "server:socket": "node ./core/socket.js",
+    "server:redis": "redis-server",
+    "format": "npx prettier --write .",
+    "format:check": "npx prettier --check .",
+    "lint": "eslint \"**/*.js\"",
+    "lint:fix": "eslint --fix \"**/*.js\"",
+    "lint:style": "npx stylelint \"**/*.css\"",
+    "prepare": "husky install"
   },
   "license": "MIT",
   "dependencies": {
@@ -26,14 +33,27 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
-    "express": "^4.17.1",
-    "ejs": "^3.1.6",
-    "socket.io": "^4.0.1",
-    "sequelize": "^6.6.2",
-    "redis": "^3.1.2",
-    "dotenv": "^8.2.0",
     "cross-env": "^7.0.3",
-    "sequelize-cli": "^6.2.0"
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "express": "^4.17.1",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
+    "nodemon": "^2.0.7",
+    "prettier": "2.3.2",
+    "redis": "^3.1.2",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
+    "socket.io": "^4.0.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
+  },
+  "lint-staged": {
+    "*.{js}": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.{js,css,md}": "prettier --write",
+    "*.js": "eslint --cache --fix"
   }
 }

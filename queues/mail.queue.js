@@ -45,6 +45,7 @@ module.exports.mailQueue = async (
     );
   });
 
+  // eslint-disable-next-line
   queue.on("completed", (job, result) => {
     console.log(`${job.data.email || "unknown email"} job completed`);
     socket.emit(
