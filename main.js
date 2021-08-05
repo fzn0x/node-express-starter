@@ -66,7 +66,8 @@ if (CONFIG.mode === "prod" || CONFIG.mode === "production") {
   const compression = require("compression");
   app.use(compression());
 
-  // Add Helmet
+  // Add express.js security with HTTP headers.
+  // See https://helmetjs.github.io/#how-it-works
   app.use(require("helmet")());
 
   // Logging :add logging to file
