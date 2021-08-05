@@ -31,7 +31,12 @@ app.use(cors());
 // END SECURITY CONFIG
 
 // Fileupload using express
-app.use(fileUpload());
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/",
+  })
+);
 // Enabling application/json request body
 app.use(express.json()); // To parse the incoming requests with JSON payloads
 // Enabling form data request body

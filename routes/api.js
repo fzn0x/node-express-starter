@@ -1,5 +1,6 @@
 const apiRouter = require("express").Router();
 const userController = require("../controllers/user.controller");
+const fileController = require("../controllers/file.controller");
 
 const tokenMiddleware = require("../middlewares/token.middleware");
 const sessionMiddleware = require("../middlewares/session.middleware");
@@ -27,18 +28,7 @@ apiRouter.post(
 );
 
 // File Management
-apiRouter.post("/file", (req, res) => {
-  return res.json({
-    success: "true",
-    message: "Coming Soon",
-  });
-});
-
-apiRouter.get("/file", (req, res) => {
-  return res.json({
-    success: "true",
-    message: "Coming Soon",
-  });
-});
+apiRouter.get("/file/:uuid", fileController.getFile);
+apiRouter.post("/file", fileController.uploadFile);
 
 module.exports = apiRouter;

@@ -67,7 +67,10 @@ module.exports.login = async (req, res) => {
       data: req.session.user,
     });
   } catch (e) {
-    console.log(e);
+    return res.status(500).json({
+      success: false,
+      message: e.message,
+    });
   }
 };
 
