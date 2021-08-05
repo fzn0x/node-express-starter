@@ -26,4 +26,19 @@ apiRouter.post(
   userController.logout
 );
 
+// File Management
+apiRouter.post("/file", (req, res) => {
+  return res.json({
+    success: "true",
+    message: "Coming Soon",
+  });
+});
+
+apiRouter.get("/file", (req, res) => {
+  return res.json({
+    success: "true",
+    message: "Coming Soon",
+  });
+});
+
 module.exports = apiRouter;

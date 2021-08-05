@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
 
   User.associate = (models) => {
     User.hasOne(models.PasswordReset, {
-      foreignKey: "id",
+      foreignKey: "user_id",
       as: "PasswordReset",
     });
   };

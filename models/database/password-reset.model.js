@@ -30,7 +30,6 @@ module.exports = (sequelize, DataTypes) => {
 
   PasswordReset.associate = (models) => {
     PasswordReset.belongsTo(models.User, {
-      foreignKey: "user_id",
       as: "User",
     });
   };
