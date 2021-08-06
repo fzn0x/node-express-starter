@@ -1,0 +1,207 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: Aksara
+  contact: {}
+host: example.com
+basePath: "/api"
+securityDefinitions: {}
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  "/auth/login":
+    post:
+      summary: Login
+      tags:
+        - Authentication
+      operationId: Login
+      deprecated: false
+      produces:
+        - application/json
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: Authorization
+          in: header
+          required: false
+          default: Bearer {token}
+          type: string
+        - name: email
+          in: formData
+          required: true
+          type: string
+          description: ""
+        - name: password
+          in: formData
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  "/auth/register":
+    post:
+      summary: Register
+      tags:
+        - Authentication
+      operationId: Register
+      deprecated: false
+      produces:
+        - application/json
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: Authorization
+          in: header
+          required: false
+          default: Bearer {token}
+          type: string
+        - name: email
+          in: formData
+          required: true
+          type: string
+          description: ""
+        - name: password
+          in: formData
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  "/auth/forgot-password":
+    post:
+      summary: Forgot Password
+      tags:
+        - Authentication
+      operationId: ForgotPassword
+      deprecated: false
+      produces:
+        - application/json
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: Authorization
+          in: header
+          required: false
+          default: Bearer {token}
+          type: string
+        - name: email
+          in: formData
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  "/auth/change-password":
+    post:
+      summary: Change Password
+      tags:
+        - Authentication
+      operationId: ChangePassword
+      deprecated: false
+      produces:
+        - application/json
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: Authorization
+          in: header
+          required: false
+          default: Bearer {token}
+          type: string
+        - name: old_password
+          in: formData
+          required: true
+          type: string
+          description: ""
+        - name: password
+          in: formData
+          required: true
+          type: string
+          description: ""
+        - name: repeat_password
+          in: formData
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  "/auth/logout":
+    post:
+      summary: Logout
+      tags:
+        - Authentication
+      operationId: Logout
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: Authorization
+          in: header
+          required: false
+          default: Bearer {token}
+          type: string
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  "/file/16da5938-fc36-4d0c-8b1e-a4c8556309e5":
+    get:
+      summary: Get File
+      tags:
+        - File Management
+      operationId: GetFile
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: Authorization
+          in: header
+          required: false
+          default: Bearer {token}
+          type: string
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  "/file":
+    post:
+      summary: Upload File
+      tags:
+        - File Management
+      operationId: UploadFile
+      deprecated: false
+      produces:
+        - application/json
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: Authorization
+          in: header
+          required: false
+          default: Bearer {token}
+          type: string
+        - name: image
+          in: formData
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+tags:
+  - name: Authentication
+  - name: File Management
