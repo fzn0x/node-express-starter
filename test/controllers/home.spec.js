@@ -1,6 +1,6 @@
 /* eslint-disable */
 let assert = require("chai").assert;
-const { fetchText } = require("../lib/test/fetcher");
+const { fetchText } = require("../../lib/test/fetcher");
 
 describe("/", function () {
   it('Match "Welcome" inside the content', async function () {
