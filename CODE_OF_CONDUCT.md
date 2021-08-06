@@ -1,4 +1,4 @@
-# Code of Conduct - idnaive
+# Code of Conduct - aksara
 
 ## Our Pledge
 
