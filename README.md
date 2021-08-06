@@ -1,5 +1,3 @@
-Project currently assigned to author only, you can keep watching this repository to wait contribution and license section writen in this repository readme.
-
 <p align="center">
     <img src="Aksara.png"></img>
 </p>
@@ -19,14 +17,5 @@ Aksara is an Opinionated Boilerplate for Node.js which this boilerplate has its 
 🚀 Upload and Get File API example with express-fileupload\
 🚀 Email queue example with Redis and Socket.IO\
 🚀 EJS integration for Monolithic App\
-🚀 Unit test example with Mocha and Chai
-
-## Todo (Assigned to Author)
-
-- [x] Auto Migration
-- [x] Ready to use authentication API
-- [x] Upload and Get File API
-- [x] Email Queue
-- [x] EJS integration
-- [x] Unit Test
-- [ ] API Documentation for API Examples
+🚀 Unit test example with Mocha and Chai\
+🚀 Swagger UI Documentation and Postman Collection for API examples
