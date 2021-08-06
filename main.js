@@ -9,6 +9,10 @@ const session = require("express-session");
 const path = require("path");
 const cors = require("cors");
 
+const swaggerUi = require("swagger-ui-express");
+const YAML = require("yamljs");
+const swaggerDocument = YAML.load("./documentation/swagger/swagger.yaml");
+
 // for monolithic app
 const web = require("./routes/web");
 // for microservices app
@@ -116,6 +120,8 @@ app.use(cors());
 app.use("/", web);
 // for microservices app
 app.use("/api", api);
+// for API docs
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
