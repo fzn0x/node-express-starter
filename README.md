@@ -1,6 +1,4 @@
-<p align="center">
-    <img src="Aksara.png"></img>
-</p>
+## node-express-starter
 
 <p align="center">
     An Opinionated Boilerplate for <a href="https://nodejs.org/en/">Node.js</a>
