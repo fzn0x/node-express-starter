@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "991458e2-1527-4b61-ad4f-6a0285b8ad3b",
-    "name": "Aksara",
+    "name": "node-express-starter",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -24,7 +24,7 @@
                 },
                 {
                   "key": "password",
-                  "value": "aksara123",
+                  "value": "node-express-starter123",
                   "type": "text"
                 }
               ]
@@ -44,12 +44,12 @@
               "formdata": [
                 {
                   "key": "email",
-                  "value": "aksara@pm.me",
+                  "value": "node-express-starter@pm.me",
                   "type": "text"
                 },
                 {
                   "key": "password",
-                  "value": "aksara",
+                  "value": "node-express-starter",
                   "type": "text"
                 }
               ]
@@ -100,12 +100,12 @@
                 },
                 {
                   "key": "password",
-                  "value": "aksara123",
+                  "value": "node-express-starter123",
                   "type": "text"
                 },
                 {
                   "key": "repeat_password",
-                  "value": "aksara123",
+                  "value": "node-express-starter123",
                   "type": "text"
                 }
               ]

@@ -8,8 +8,8 @@ describe("/", function () {
     assert.match(content, /Welcome/g);
   });
 
-  it('Match "Aksara" inside the content', async function () {
+  it('Match "node-express-starter" inside the content', async function () {
     const content = await fetchText("http://localhost:3000");
-    assert.match(content, /Aksara/g);
+    assert.match(content, /node-express-starter/g);
   });
 });

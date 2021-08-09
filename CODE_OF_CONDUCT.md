@@ -1,4 +1,4 @@
-# Code of Conduct - aksara
+# Code of Conduct - node-express-starter
 
 ## Our Pledge
 

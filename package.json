@@ -1,5 +1,5 @@
 {
-  "name": "aksara",
+  "name": "node-express-starter",
   "version": "1.0.0",
   "description": "An Opinionated Boilerplate for Node.js",
   "scripts": {

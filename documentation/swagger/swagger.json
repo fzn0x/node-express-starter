@@ -1,6 +1,6 @@
 {
   "swagger": "2.0",
-  "info": { "version": "1.0", "title": "Aksara", "contact": {} },
+  "info": { "version": "1.0", "title": "node-express-starter", "contact": {} },
   "host": "localhost:3000",
   "basePath": "/api",
   "securityDefinitions": {},
