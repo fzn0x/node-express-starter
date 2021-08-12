@@ -1,6 +1,5 @@
 /* eslint-disable */
 let assert = require("chai").assert;
-const { fetchText } = require("../../lib/test/fetcher");
 const { verifyObjectProperties } = require("../../utils/obj.util");
 
 describe("obj.util.js", function () {
