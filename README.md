@@ -1,10 +1,10 @@
-## node-express-starter
-
 <p align="center">
-    An Opinionated Boilerplate for <a href="https://nodejs.org/en/">Node.js</a>
+    <img src="./node-express-starter.png" alt="node-express-starter is an opinionated boilerplate for nodejs">
 </p>
 
-node-express-starter means **script** for <a href="https://en.wikipedia.org/wiki/Javanese_script">Javanese</a>.
+<p align="center">
+    An Opinionated Boilerplate for <a href="https://nodejs.org/en/">Nodejs</a>
+</p>
 
 node-express-starter is an Opinionated Boilerplate for Node.js which this boilerplate has its own provisions in file naming, whens application running and code management.
 
